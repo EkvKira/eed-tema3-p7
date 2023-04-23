@@ -59,7 +59,12 @@ public class Board {
     }
 
     public Cell getCell(int row, int col) {
-        return this.cells[row][col];
+        if(row>=0 && row<=7 && col>=0 && col<=7){
+        return this.cells[row][col];}
+        else {
+            this.cells=null;
+        }
+        return null;
     }
 
     public int getHeight() {
@@ -71,6 +76,8 @@ public class Board {
     }
 
     public Move move(int star_row, int star_col, int end_row, int end_col) {
+         if(star_row>=0 && star_row<=7 && star_col>=0 && star_col<=7 && end_row>=0 && end_row<=7 && end_col>=0 && end_col<=7){
+
         Piece p = this.cells[star_row][star_col].getPiece();
 
         Move m = null;
@@ -80,6 +87,11 @@ public class Board {
             this.cells[end_row][end_col].setPiece(p);
         }
         return m;
+         }
+        else {
+            this.cells=null;
+        }
+        return null;
     }
 
     public String toString() {
