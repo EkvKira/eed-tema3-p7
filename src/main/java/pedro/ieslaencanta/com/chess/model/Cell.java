@@ -50,6 +50,7 @@ public class Cell {
      */
     public void setPosition(Position position) {
         this.position = position;
+        
     }
 
     /**
