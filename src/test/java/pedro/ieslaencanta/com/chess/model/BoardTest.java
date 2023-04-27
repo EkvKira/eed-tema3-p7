@@ -249,6 +249,7 @@ public class BoardTest {
         Move result = instance.move(1, 1, 7, 8);
         assertNull(result);
     }
+    
     //    @Test
 //    public void testGetCell() {
 //        Board instance = new Board();
