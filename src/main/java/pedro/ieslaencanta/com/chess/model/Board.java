@@ -32,7 +32,9 @@ public class Board {
             for (int j = 0; j < this.cells[i].length; j++) {
                 this.cells[i][j] = new Cell(i, j);
             }
-        }        
+        }  
+
+
         this.cells[0][1].setPiece(new Knight(0, 1, PieceType.Black, true,"1"));
         this.cells[0][0].setPiece(new Rook(0, 0, PieceType.Black, true,"1"));
         this.cells[0][2].setPiece(new Bishop(0, 2, PieceType.Black, true,"1"));
